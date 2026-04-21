@@ -1,15 +1,20 @@
-public class main{
-    public main() { 
-}
+public class Main {
     public static void main(String[] args) {
-        ewallet dompetku = new ewallet("Alice", 50000);
-        System.out.println("Saldo Awal: " + dompetku.getsaldo());
 
-        dompetku.deposit(20000);
-        System.out.println("Setelah Deposit 20rb: " + dompetku.getsaldo());
+        OVO ovoAtha = new OVO(50000);
+        DANA danaAtha = new DANA(100000);
 
-        if (!dompetku.withdraw(100000)) {
-            System.out.println("Transaksi Gagal: Saldo tidak cukup!");
-        }
+        System.out.println("--- Saldo Awal ---");
+        System.out.println("OVO: " + ovoAtha.getSaldo());
+        System.out.println("DANA: " + danaAtha.getSaldo());
+
+        System.out.println("\n--- Proses Transaksi ---");
+        System.out.println("Melakukan pembayaran sebesar Rp20.000 menggunakan OVO...");
+        System.out.println("Melakukan pembayaran sebesar Rp150.000 menggunakan DANA...");
+        ovoAtha.bayar(20000); 
+        danaAtha.bayar(150000); 
+        System.out.println("\n--- Saldo Akhir ---");
+        System.out.println("Sisa OVO: " + ovoAtha.getSaldo());
+        System.out.println("Sisa DANA: " + danaAtha.getSaldo());
     }
 }
