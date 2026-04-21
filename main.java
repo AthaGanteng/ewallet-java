@@ -1,8 +1,8 @@
 public class Main {
     public static void main(String[] args) {
 
-        OVO ovoAtha = new OVO(50000);
-        DANA danaAtha = new DANA(100000);
+        OVO ovoAtha = new OVO(500000);
+        DANA danaAtha = new DANA(140000);
 
         System.out.println("--- Saldo Awal ---");
         System.out.println("OVO: " + ovoAtha.getSaldo());
