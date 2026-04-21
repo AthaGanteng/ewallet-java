@@ -1,15 +1,17 @@
-public class OVO extends Pembayaran implements LayananPembayaran {
+public class OVO implements LayananPembayaran {
+    private double saldoOvo; 
+
     public OVO(double saldoAwal) {
-        super("OVO", saldoAwal);
+        this.saldoOvo = saldoAwal;
     }
 
     @Override
-    public void bayar(double jumlah) {
-        if (saldo >= jumlah) {
-            saldo -= jumlah; 
-            System.out.println("Pembayaran OVO Berhasil: Rp" + jumlah);
+    public void bayar(double jumlah) { 
+        if (saldoOvo >= jumlah) {
+            saldoOvo -= jumlah;
+            System.out.println("Berhasil bayar pakai OVO: Rp" + jumlah);
         } else {
-            System.out.println("Pembayaran OVO Gagal: Saldo tidak cukup!");
+            System.out.println("Saldo OVO tidak cukup!");
         }
     }
 }

@@ -1,15 +1,14 @@
-public class DANA extends Pembayaran implements LayananPembayaran {
+public class DANA extends Pembayaran {
     public DANA(double saldoAwal) {
         super("DANA", saldoAwal);
     }
 
-    @Override
-    public void bayar(double jumlah) {
-        if (saldo >= jumlah) {  
+    public void prosesDana(double jumlah) { 
+        if (saldo >= jumlah) {
             saldo -= jumlah;
-            System.out.println("Pembayaran DANA Berhasil: Rp" + jumlah);
+            System.out.println("Berhasil bayar pakai DANA: Rp" + jumlah);
         } else {
-            System.out.println("Pembayaran DANA Gagal: Saldo tidak cukup!");
+            System.out.println("Saldo DANA tidak cukup!");
         }
     }
 }

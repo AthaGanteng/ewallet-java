@@ -6,8 +6,4 @@ public class Pembayaran {
         this.namaPlatform = namaPlatform;
         this.saldo = saldoAwal;
     }
-
-    public double getSaldo() {
-        return this.saldo;
-    }
 }
